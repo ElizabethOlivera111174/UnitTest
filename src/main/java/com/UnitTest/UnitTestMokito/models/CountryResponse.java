@@ -1,5 +1,9 @@
 package com.UnitTest.UnitTestMokito.models;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class CountryResponse {
     private String countryName;
     private String capitalName;
@@ -7,6 +11,7 @@ public class CountryResponse {
     private int yearsOfIndependency;
     private int monthsOfIndependency;
     private int dayssOfIndependency;
+
 
     public String getCountryName() {
         return countryName;
@@ -37,4 +42,5 @@ public class CountryResponse {
     public void setDayssOfIndependency(int dayssOfIndependency) {
         this.dayssOfIndependency = dayssOfIndependency;
     }
+
 }

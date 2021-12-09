@@ -1,0 +1,28 @@
+version: '2'
+services:
+  app:
+    image: 'UnitTest:latest'
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      - mysql_container
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:13306/users_db
+      - SPRING_DATASOURCE_USERNAME=mysqluser
+      - SPRING_DATASOURCE_PASSWORD=secret
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+    ports:
+      - 8080:8080
+  mysql_container:
+    image: 'mysql:latest'
+    container_name: mysql_container
+    restart: always
+      ports:
+         - 13306:3306
+      environment:
+        MYSQL_ROOT_PASSWORD: secret
+        MYSQL_DATABASE: users_db
+        MYSQL_USER: mysqluser
+        MYSQL_PASSWORD: secret
