@@ -10,7 +10,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://localhost:13306/users_db
       - SPRING_DATASOURCE_USERNAME=mysqluser
-      - SPRING_DATASOURCE_PASSWORD=secret
+      - SPRING_DATASOURCE_PASSWORD=
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - SPRING_JPA_SHOW_SQL=true
     ports:
@@ -22,7 +22,7 @@ services:
       ports:
          - 13306:3306
       environment:
-        MYSQL_ROOT_PASSWORD: secret
+        MYSQL_ROOT_PASSWORD:
         MYSQL_DATABASE: users_db
         MYSQL_USER: mysqluser
-        MYSQL_PASSWORD: secret
+        MYSQL_PASSWORD:
