@@ -6,7 +6,7 @@ services:
     ports:
       - 13306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: users_db
       MYSQL_USER: mysqluser
-      MYSQL_PASSWORD: secret
+      MYSQL_PASSWORD:

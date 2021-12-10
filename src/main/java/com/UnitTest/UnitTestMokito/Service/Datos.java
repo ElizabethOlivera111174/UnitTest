@@ -2,7 +2,6 @@ package com.UnitTest.UnitTestMokito.Service;
 
 import com.UnitTest.UnitTestMokito.models.Banco;
 import com.UnitTest.UnitTestMokito.models.Cuenta;
-import com.UnitTest.UnitTestMokito.models.User;
 
 import java.math.BigDecimal;
 import java.util.Optional;
